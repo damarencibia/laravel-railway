@@ -13,9 +13,9 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        Pieza::factory(12)->create();
-        Componente::factory(8)->create();
-        Licencia::factory(8)->create();
+        // Pieza::factory(12)->create();
+        // Componente::factory(8)->create();
+        // Licencia::factory(8)->create();
         User::factory(1)->create();
 
     }

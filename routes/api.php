@@ -56,6 +56,12 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/componentes-lector_cd-disponibles', [ComponenteController::class, 'filterByLectorCd']);
     Route::get('/componentes-ram-disponibles', [ComponenteController::class, 'filterByRam']);
     Route::get('/componentes-disco_duro-disponibles', [ComponenteController::class, 'filterByDiscoDuro']);
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    Route::get('/componentes-filterAllByPlacaBase', [ComponenteController::class, 'filterAllByPlacaBase']);
+    Route::get('/componentes-filterAllByRam', [ComponenteController::class, 'filterAllByRam']);
+    Route::get('/componentes-filterAllByDiscoDuro', [ComponenteController::class, 'filterAllByDiscoDuro']);
+    Route::get('/componentes-filterAllByLectorCd', [ComponenteController::class, 'filterAllByLectorCd']);
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
     Route::get('/historial-componentes', [HistorialComponenteController::class, 'index']);
     Route::get('/historial-componentes/{id}', [HistorialComponenteController::class, 'show']);
 

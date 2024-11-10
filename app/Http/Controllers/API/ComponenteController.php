@@ -178,6 +178,12 @@ class ComponenteController extends \Illuminate\Routing\Controller
 
         return response()->json($comoponentesDisponibles);
     }
+    public function unavailableComponents()
+    {
+        $comoponentesNoDisponibles = Componente::where('disponible', 0)->get();
+
+        return response()->json($comoponentesNoDisponibles);
+    }
 
     public function filterByPlacaBase()
     {

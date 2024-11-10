@@ -52,6 +52,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::delete('/componentes/{id}', [ComponenteController::class, 'destroy']);
     // Filtros
     Route::get('/componentes-disponibles', [ComponenteController::class, 'availableComponents']);
+    Route::get('/componentes-no_disponibles', [ComponenteController::class, 'unavailableComponents']);
     Route::get('/componentes-placa_base-disponibles', [ComponenteController::class, 'filterByPlacaBase']);
     Route::get('/componentes-lector_cd-disponibles', [ComponenteController::class, 'filterByLectorCd']);
     Route::get('/componentes-ram-disponibles', [ComponenteController::class, 'filterByRam']);

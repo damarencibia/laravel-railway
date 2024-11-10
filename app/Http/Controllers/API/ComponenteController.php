@@ -219,4 +219,41 @@ class ComponenteController extends \Illuminate\Routing\Controller
 
         return response()->json($comoponentesDisponibles);
     }
+
+    public function filterAllByPlacaBase()
+    {
+        $comoponentesDisponibles = Componente::where([
+            ['tipo_componente', 'placa_base']
+
+        ])->get();
+
+        return response()->json($comoponentesDisponibles);
+    }
+    public function filterAllByRam()
+    {
+        $comoponentesDisponibles = Componente::where([
+            ['tipo_componente', 'memoria_ram']
+
+        ])->get();
+
+        return response()->json($comoponentesDisponibles);
+    }
+    public function filterAllByDiscoDuro()
+    {
+        $comoponentesDisponibles = Componente::where([
+            ['tipo_componente', 'disco_duro']
+
+        ])->get();
+
+        return response()->json($comoponentesDisponibles);
+    }
+    public function filterAllByLectorCd()
+    {
+        $comoponentesDisponibles = Componente::where([
+            ['tipo_componente', 'lector_cd']
+
+        ])->get();
+
+        return response()->json($comoponentesDisponibles);
+    }
 }

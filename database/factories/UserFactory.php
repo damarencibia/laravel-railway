@@ -16,7 +16,7 @@ class UserFactory extends Factory
     public function definition(array $attributes = [])
     {
         return [
-            'name' => 'afghad',
+            'name' => 'admin',
             'status' => 'comprador',
             'provider' => 1,
             'password' => bcrypt('12345678'),
